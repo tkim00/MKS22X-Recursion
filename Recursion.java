@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Recursion {
   public static void main(String[] args) {
     //sqrt testing
@@ -35,5 +37,13 @@ public class Recursion {
     } else {
       return 1;
     }
+  }
+
+  public static ArrayList<Integer> makeAllSums(Integer n) {
+    ArrayList<Integer> sums = new ArrayList<Integer>();
+    return makeAllSumsH(n, sums);
+  }
+  public static ArrayList<Integer> makeAllSumsH(Integer n) {
+
   }
 }

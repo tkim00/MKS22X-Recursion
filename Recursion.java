@@ -9,8 +9,8 @@ public class Recursion {
     return sqrtH(n, tolerance, guess);
   }
   public static double sqrtH(double n, double tolerance, double guess){
-    if ((1+tolerance) * guess > ( n / guess + guess) / 2) ||
-    ((1-tolerance) * guess < ( n / guess + guess) / 2){
+    if (((1+tolerance) * guess > ( n / guess + guess) / 2) ||
+    ((1-tolerance) * guess < ( n / guess + guess) / 2))){
       return sqrtH(n, tolerance, ( n / guess + guess) / 2)
     } else {
       return guess;

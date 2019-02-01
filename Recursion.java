@@ -7,7 +7,11 @@ public class Recursion {
     System.out.println(sqrt(100,.00001));
     System.out.println(sqrt(.2,.00001));
     System.out.println(sqrt(.25,.00001));
-
+    //fib testing
+    System.out.println(fib(0));
+    System.out.println(fib(1));
+    System.out.println(fib(5));
+    System.out.println(fib(10));
   }
 
   public static double sqrt(double n, double tolerance){
@@ -20,6 +24,14 @@ public class Recursion {
       return sqrtH(n, tolerance, ( n / guess + guess) / 2);
     } else {
       return guess;
+    }
+  }
+
+  public static int fib(int n) {
+    if (n > 1) {
+      return fib(n-1) + fib(n-2);
+    } else {
+      return 1;
     }
   }
 }

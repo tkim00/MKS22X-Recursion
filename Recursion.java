@@ -43,14 +43,16 @@ public class Recursion {
 
   public static ArrayList<Integer> makeAllSums(Integer n) {
     ArrayList<Integer> sums = new ArrayList<Integer>();
-    makeAllSumsH(n, false, sums);
+    makeAllSumsH(n, sums, 0);
     return sums;
   }
-  public static void makeAllSumsH(Integer n, boolean number, ArrayList<Integer> sums) {
+  public static void makeAllSumsH(Integer n, ArrayList<Integer> sums, Integer i) {
     if (n > 0) {
-
+      makeAllSumsH(n-1, sums, i+n);
+      makeAllSumsH(n-1, sums, i);
     }
-
-
+    if (n==0) {
+      sums.add(i);
+    }
   }
 }

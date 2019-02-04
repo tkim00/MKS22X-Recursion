@@ -34,16 +34,23 @@ public class Recursion {
   public static int fib(int n) {
     if (n > 1) {
       return fib(n-1) + fib(n-2);
-    } else {
+    } else if (n==1) {
       return 1;
+    } else {
+      return 0;
     }
   }
 
   public static ArrayList<Integer> makeAllSums(Integer n) {
     ArrayList<Integer> sums = new ArrayList<Integer>();
-    return makeAllSumsH(n, sums);
+    makeAllSumsH(n, false, sums);
+    return sums;
   }
-  public static ArrayList<Integer> makeAllSumsH(Integer n) {
+  public static void makeAllSumsH(Integer n, boolean number, ArrayList<Integer> sums) {
+    if (n > 0) {
+
+    }
+
 
   }
 }

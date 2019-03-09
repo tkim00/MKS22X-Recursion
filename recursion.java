@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Recursion {
+public class recursion {
   public static void main(String[] args) {
     //sqrt testing
     System.out.println(sqrt(2,.00001));
